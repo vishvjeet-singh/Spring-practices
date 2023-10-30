@@ -6,9 +6,9 @@ package com.spring;
  */
 public class App {
 	public static void main(String[] args) {
-		Ram ram = new Ram();
-		ram.eat();
-		ram.sleep();
+		Action ac = new Ram();
+		ac.eat();
+	     ac.sleep();
 		shyam sham=new shyam();
 		sham.eat();
 		sham.sleep();
