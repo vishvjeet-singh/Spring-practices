@@ -9,6 +9,9 @@ public class App {
 		Action ac = new Ram();
 		ac.eat();
 	     ac.sleep();
+		shyam sham=new shyam();
+		sham.eat();
+		sham.sleep();
 
 	}
 }
