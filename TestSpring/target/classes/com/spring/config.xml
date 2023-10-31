@@ -7,7 +7,7 @@
   <bean id="ram" class="com.spring.Ram">
   <constructor-arg value="14"></constructor-arg>
   <property name="food" ref="food"></property>
-  </bean>
+sss  </bean>
   <bean id="food" class="com.spring.food">
   
   </bean>
