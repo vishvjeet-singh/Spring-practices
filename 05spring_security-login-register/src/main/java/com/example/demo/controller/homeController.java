@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class homeController {
 
@@ -39,18 +41,17 @@ public class homeController {
 	}
 	
 	@PostMapping("/saveUser")
-	public String saveUser(@ModelAttribute User user) {
+	public String saveUser(@ModelAttribute User user ,HttpSession session) {
 		
      User u =userService.saveUser(user);
      if (u!=null) {
-    	 System.out.println("save successfully");
-		
+session.setAttribute("msg", "Register Successfully");		
 	}
      else {
-		System.out.println("error");
+    	 session.setAttribute("msg", "Error");		
 	}
      
-		return "register";
+		return "redirect:/register";
 		
 	}
 
