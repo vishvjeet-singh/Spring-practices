@@ -8,7 +8,9 @@
 </head>
 <body>
 <h1>hello</h1>
- <h4>result is : ${alien}
+ <h4>result is : ${a1}
+ 
+ 
   </h4>
 
 </body>

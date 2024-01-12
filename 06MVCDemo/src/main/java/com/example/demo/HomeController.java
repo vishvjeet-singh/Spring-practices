@@ -4,16 +4,19 @@ import javax.naming.spi.DirStateFactory.Result;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.model.alien;
 
+import ch.qos.logback.core.model.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
+	
 	
 	@RequestMapping("/")
 	public String home() {
@@ -31,13 +34,9 @@ public class HomeController {
 	}
 	
 	@RequestMapping("addAlien")
-	public String adaAlian(@RequestParam("aid") int aid , @RequestParam("aname") String aname, ModelMap m) {
+	public String adaAlian(@ModelAttribute ("a1") alien a, ModelMap m) {
 		
-    alien a = new alien();
-    a.setAid(aid);
-    a.setAname(aname);
     
-    m.addAttribute("alien",a);
 		
 		return "result";
 		
